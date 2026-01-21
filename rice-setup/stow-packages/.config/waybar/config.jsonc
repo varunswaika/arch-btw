@@ -1,0 +1,236 @@
+{
+  "position": "top",
+  "margin-top": 5,
+
+  "modules-left": ["custom/launcher", "clock", "hyprland/window", "custom/weather", "custom/pacman", "custom/media", "hyprland/submap"],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": ["pulseaudio", "bluetooth", "network", "cpu", "memory", "temperature"],
+
+  "cpu": {
+    "format": " {usage}%",
+    "on-click": "ghostty -e btop"
+  },
+
+  "memory": {
+    "format": " {}%",
+    "on-click": "ghostty -e btop"
+  },
+
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+    "on-click": "ghostty -e btop"
+  },
+
+  "hyprland/submap": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "max-length": 25,
+    "separate-outputs": true,
+    "offscreen-css": true,
+    "rewrite": {
+      "^$": "󱩡 varun btw",
+      "ghostty": "󰊠 Ghostty",
+      "com.mitchellh.ghostty": "󰊠 Ghostty",
+      "zen-alpha": "󰈹 Zen",
+      "zen": "󰈹 Zen",
+      "firefox": "󰈹 Firefox",
+      "google-chrome": " Chrome",
+      "brave-browser": "󰖟 Brave",
+      "chromium": " Chromium",
+      "code-oss": "󰨞 VS Code",
+      "code": "󰨞 VS Code",
+      "vscode": "󰨞 VS Code",
+      "yazi": "󰇉 Yazi",
+      "lazygit": " Lazygit",
+      "lazydocker": " Lazydocker",
+      "mpv": " MPV",
+      "imv": " IMV",
+      "obs": " OBS Studio",
+      "com.obsproject.Studio": " OBS Studio",
+      "org.gnome.Nautilus": "󰣆 Nautilus",
+      "nautilus": "󰣆 Nautilus",
+      "dolphin": "󰉋 Dolphin",
+      "thunar": "󰉋 Thunar",
+      "pcmanfm": "󰉋 PCManFM",
+      "ranger": "󰉋 Ranger",
+      "evince": " Evince",
+      "org.gnome.Evince": " Evince",
+      "com.github.xournalpp.xournalpp": " Xournal++",
+      "xournalpp": " Xournal++",
+      "vial": " Vial",
+      "vesktop": " Vesktop",
+      "unityhub": "󰚯 Unity",
+      "steam": " Steam",
+      "lutris": " Lutris",
+      "pavucontrol": " Audio",
+      "org.pulseaudio.pavucontrol": " Audio",
+      "bluetui": " Bluetooth",
+      "impala": " WiFi",
+      "wiremix": " Mixer",
+      "sublime_text": " Sublime",
+      "slack": "󰒱 Slack",
+      "discord": " Discord",
+      "telegram-desktop": " Telegram",
+      "org.telegram.desktop": " Telegram",
+      "spotify": " Spotify",
+      "vlc": "󰕼 VLC",
+      "gimp": " GIMP",
+      "inkscape": " Inkscape",
+      "blender": "󰂫 Blender",
+      "krita": " Krita",
+      "libreoffice-writer": "󰈙 Writer",
+      "libreoffice-calc": "󰈙 Calc",
+      "libreoffice-impress": "󰈐 Impress",
+      "kitty": "󰄛 Kitty",
+      "alacritty": " Alacritty",
+      "heroic": "󰚯 Heroic",
+      "prismlauncher": "󰚯 Prism",
+      "org.qbittorrent.qBittorrent": "󰅙 qBittorrent",
+      "qbittorrent": "󰅙 qBittorrent",
+      "thunderbird": " Thunderbird",
+      "bitwarden": "󰞀 Bitwarden",
+      "signal": "󰈗 Signal",
+      "zoom": "󰕧 Zoom",
+      "postman": "󱓟 Postman",
+      "insomnia": " Insomnia",
+      "wireshark": "󰈙 Wireshark",
+      "virt-manager": "󰢹 Virt-Manager"
+    }
+  },
+
+  "hyprland/workspaces": {
+    "format": "",
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-click": "activate",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {icon} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "on-click": "ghostty -e bluetui"
+  },
+
+  "custom/notification": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "pkill rofi || rofi -show drun",
+    "tooltip-format": "Launch your favorite apps"
+  },
+
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location Sydney --nerd --custom-indicator \"{ICON} {temp_C}°C\"",
+    "return-type": "json"
+  },
+
+  "custom/media": {
+    "format": "  {}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 15,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "ghostty -e cava",
+    "smooth-scrolling-threshold": 1,
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+  },
+
+  "custom/pacman": {
+    "format": "󰅢 {}",
+    "interval": 3600,
+    "exec": "waybar-module-pacman-updates",
+    "exec-if": "exit 0",
+    "on-click": "ghostty -e yay -Syu",
+    "signal": 8,
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "{icon}   {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format": "Battery is at {capacity}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "󰂱 {volume}%",
+    "format-muted": "󰖁",
+    "scroll-step": 1,
+    "on-click": "ghostty -e wiremix",
+    "on-click-right": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    },
+    "tooltip-format": "Volume: {volume}%"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}  {essid}",
+    "format-ethernet": "󰈀  {ipaddr}/{cidr}",
+    "format-disconnected": "󰤭  Disconnected",
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click": "ghostty -e impala",
+    "tooltip-format": "Connected to {essid}"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%I:%M %p   %a, %b %d}",
+    "tooltip": false
+  },
+
+  "tray": {
+	"icon-size": 21,
+	"spacing": 10
+  }
+}

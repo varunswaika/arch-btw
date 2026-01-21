@@ -1,0 +1,244 @@
+# System Base
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+btrfs-progs
+man-pages
+
+# Boot & Bootloader
+limine
+plymouth
+
+# Hardware & Drivers
+broadcom-wl
+dkms
+egl-wayland
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+libpulse
+pamixer
+
+# Hypr Ecosystem
+hyprland
+hyprlock
+hypridle
+swww
+hyprpicker
+hyprcursor
+hyprsunset
+hyprpolkitagent
+xdg-desktop-portal-hyprland
+
+# Hypr Development Libraries
+hyprutils
+hyprlang
+hyprwayland-scanner
+aquamarine
+hyprgraphics
+hyprland-guiutils
+hyprland-protocols
+
+# Wayland & Display
+qt5-wayland
+qt6-wayland
+wl-clipboard
+xdg-desktop-portal-gtk
+gst-plugin-pipewire
+gtk4-layer-shell
+imagemagick
+
+# Terminal
+ghostty
+
+# TUIs
+yazi
+btop
+bluetui
+impala
+lazygit
+lazydocker
+opencode-bin
+fastfetch
+wiremix
+cava
+
+# CLI Tools
+bat
+eza
+fd
+fzf
+gum
+htop
+inxi
+jq
+man-db
+plocate
+ripgrep
+tldr
+unzip
+zip
+usage
+wget
+whois
+yq
+zoxide
+stow
+nano
+curl
+rsync
+openssh
+
+# Shell
+zsh
+bash-completion
+oh-my-posh
+xdg-terminal-exec
+zsh-autosuggestions
+zsh-syntax-highlighting
+
+# Input Method
+fcitx5
+fcitx5-gtk
+fcitx5-qt
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+ttf-cascadia-mono-nerd
+ttf-ia-writer
+ttf-jetbrains-mono-nerd
+ttf-fira-mono
+ttf-fira-sans
+ttf-firacode-nerd
+woff2-font-awesome
+fontconfig
+
+# File System & Network
+avahi
+exfatprogs
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
+inetutils
+iwd
+nss-mdns
+wireless-regdb
+
+# Notifications & UI
+swaync
+swayosd
+polkit-gnome
+wlogout
+nwg-look
+qt5ct
+qt6ct
+
+# Application Launcher & Menu
+rofi-wayland
+kvantum-qt5
+
+# Bars & Panels
+waybar
+wttrbar
+waybar-module-pacman-updates-git
+
+# Screenshots & Screen Tools
+grim
+slurp
+satty
+wayfreeze
+gpu-screen-recorder
+
+# Media & Images
+ffmpegthumbnailer
+mpv
+obs-studio
+imv
+
+# System Utilities
+brightnessctl
+playerctl
+power-profiles-daemon
+tzupdate
+
+# Development Tools
+git
+mise
+tree-sitter-cli
+expac
+libsecret
+libyaml
+libqalculate
+python-gobject
+webp-pixbuf-loader
+xmlstarlet
+
+# Build Tools & Compilers
+autoconf-archive
+clang
+llvm
+rust
+sassc
+libsass
+intltool
+cmake
+
+# Database
+sqlite
+postgresql
+
+# Language Runtimes
+go
+dart
+dotnet-runtime-9.0
+jdk-openjdk
+luarocks
+python-poetry-core
+ruby
+
+# Containers & DevOps
+docker
+docker-buildx
+docker-compose
+
+# Version Control
+github-cli
+
+# Document Tools
+texlive-most
+typst
+
+# Applications
+nvim
+zen-browser-bin
+nautilus
+evince
+xournalpp
+vial-appimage
+
+# Package Management
+yay
+yay-debug
+pacman-contrib
+
+# Icons & Themes
+yaru-icon-theme
+rose-pine-cursor
+rose-pine-gtk-theme
+rose-pine-hyprcursor
+
+# Desktop Integration
+uwsm
+sddm
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
