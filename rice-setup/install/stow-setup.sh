@@ -8,28 +8,18 @@ DOTFILES_DIR="$SCRIPT_DIR/../dotfiles"
 cd "$DOTFILES_DIR" || exit 1
 
 # --- Conflict Resolution ---
-BACKUP_DIR="$HOME/.dotfiles.backup.$(date +%Y%m%d_%H%M%S)"
-HAS_BACKUP=false
-
 echo "Checking for conflicts..."
 
 # We iterate over all files we intend to stow.
-# If a real file (not a symlink) exists at the target, we back it up.
+# If a real file (not a symlink) exists at the target, we remove it.
 find . -type f | while read -r file; do
     # Strip leading ./
     rel_path="${file#./}"
     target_path="$HOME/$rel_path"
 
     if [ -e "$target_path" ] && [ ! -L "$target_path" ]; then
-        if [ "$HAS_BACKUP" = false ]; then
-            mkdir -p "$BACKUP_DIR"
-            HAS_BACKUP=true
-            echo "  Conflicts found. Backing up to $BACKUP_DIR"
-        fi
-        
-        echo "  Backing up: $rel_path"
-        mkdir -p "$BACKUP_DIR/$(dirname "$rel_path")"
-        mv "$target_path" "$BACKUP_DIR/$rel_path"
+        echo "  Conflict found. Removing existing file: $rel_path"
+        rm -rf "$target_path"
     fi
 done
 
@@ -48,8 +38,8 @@ if [ ! -d "$TARGET_GRUB_DIR" ]; then
 fi
 
 echo "Stowing GRUB theme to $TARGET_GRUB_DIR..."
-# Note: Conflict resolution for system files is harder/riskier. 
-# We assume the user hasn't manually installed a conflicting 'catppuccin-mocha-grub-theme' folder there.
+# For system files, we'll be more cautious but still follow the "remove" instruction
+# if there's a conflict within the specific grub theme directory.
 sudo stow -t "$TARGET_GRUB_DIR" grub
 
 echo "Dotfiles have been stowed."
