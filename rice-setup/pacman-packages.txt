@@ -140,7 +140,7 @@ zen-browser-bin
 ttf-firacode-nerd
 ttf-fira-mono
 ttf-fira-sans
-ttf-openmoji
+otf-openmoji
 fontconfig
 
 # Multimedia & Graphics
