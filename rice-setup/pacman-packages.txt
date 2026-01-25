@@ -1,0 +1,183 @@
+# Base & Kernel
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+btrfs-progs
+man-pages
+man-db
+
+# Boot & Login
+plymouth
+ly-git
+
+# Network & Bluetooth
+inetutils
+iwd
+wireless-regdb
+broadcom-wl
+bluez
+bluez-utils
+avahi
+nss-mdns
+curl
+wget
+openssh
+whois
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+libpulse
+pamixer
+playerctl
+
+# Hyprland & Compositor
+hyprland
+hypridle
+hyprpicker
+hyprcursor-git
+hyprpolkitagent
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+uwsm
+egl-wayland
+wl-clipboard
+cliphist
+
+# Theming & Wallpaper
+swww
+nwg-look
+qt5ct
+qt6ct
+gtk4-layer-shell
+papirus-icon-theme
+papirus-folders-catppuccin-git
+phinger-cursors
+catppuccin-gtk-theme-mocha
+
+# Bars, Launchers & Notifications
+waybar
+wttrbar
+waybar-module-pacman-updates-git
+rofi
+mako
+swayosd
+
+# Shell & Terminal
+zsh
+bash-completion
+zsh-autosuggestions
+zsh-syntax-highlighting
+starship-git
+ghostty
+xdg-terminal-exec
+
+# CLI Utilities & Enhancements
+bat
+eza
+fd
+fzf
+ripgrep
+zoxide
+gum
+inxi
+unzip
+zip
+tzupdate
+brightnessctl
+power-profiles-daemon
+
+# TUI Applications
+yazi
+btop
+fastfetch
+lazygit
+lazydocker
+impala
+cava
+bluetui
+wiremix
+
+# Development Tools
+git
+github-cli
+tree-sitter-cli
+opencode-bin
+vial-appimage
+
+# Programming Languages & Compilers
+go
+rust
+ruby
+luarocks
+python-poetry-core
+python-gobject
+clang
+llvm
+cmake
+sassc
+libsass
+autoconf-archive
+libsecret
+libyaml
+libqalculate
+
+# Containers
+docker
+docker-buildx
+docker-compose
+
+# Editors & Browsers
+nvim
+zen-browser-bin
+
+# Fonts
+ttf-firacode-nerd
+ttf-fira-mono
+ttf-fira-sans
+ttf-openmoji
+fontconfig
+
+# Multimedia & Graphics
+mpv
+imv
+obs-studio
+inkscape
+optipng
+imagemagick
+ffmpegthumbnailer
+webp-pixbuf-loader
+gst-plugin-pipewire
+gpu-screen-recorder
+
+# Screenshot & Recording
+grim
+slurp
+satty
+wayfreeze
+
+# Documents & Viewers
+texlive-most
+typst
+evince
+
+# File System & Integration
+nautilus
+gvfs-nfs
+gvfs-smb
+exfatprogs
+stow
+polkit
+qt5-wayland
+qt6-wayland
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
+
+# Package Management
+yay

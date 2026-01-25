@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# A script to show a searchable menu of keybindings using rofi.
-
-hyprctl -j binds | jq -r '.[] | "\(.modmask) + \(.key) → \(.dispatcher) \(.arg)"' | \
-sed -e 's/SUPER +/SUPER + /' -e 's/ALT +/ALT + /' | \
-rofi -dmenu -i -p "Keybindings"
-

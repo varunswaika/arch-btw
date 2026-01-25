@@ -1,0 +1,86 @@
+Rofi Menu Plan (Hyprland · Arch · Catppuccin Mocha)
+
+Structure
+~/.config/rofi/
+├── config.rasi
+├── theme/catppuccin-mocha.rasi
+├── scripts/
+│   ├── launcher.sh
+│   ├── clipboard.sh
+│   ├── emoji.sh
+│   ├── quicklinks.sh
+│   ├── screenshot.sh
+│   ├── power.sh
+│   └── user-scripts.sh
+└── data/
+    ├── quicklinks.txt
+    └── user-scripts.txt
+
+Main Menu
+- App Search
+- Clipboard
+- Emoji Picker
+- Quick Links
+- Screenshot / Recording
+- Power Menu
+- User Scripts
+
+Each entry opens a sub-menu.
+
+App Search
+- rofi -show drun
+- Nerd icons enabled
+- Catppuccin Mocha theme
+
+Clipboard
+- Backend: cliphist
+- cliphist list | rofi -dmenu
+- Select → paste
+
+Emoji Picker
+- Rofi dmenu
+- Uses OpenMoji font
+- Selection copied via wl-copy
+
+Quick Links
+- Data file: data/quicklinks.txt
+- Format: NerdFont emoji | Name | URL
+- Opens default browser
+- Includes “Edit Quick Links” option (opens file in $EDITOR)
+
+Screenshot / Recording (Two-stage)
+
+Menu 1: Action
+- Screenshot Region
+- Screenshot Window
+- Screenshot Screen
+- Record Screen (delay prompt)
+- Record Region (delay prompt)
+- Stop Recording
+
+Menu 2: Options
+- Prompt for filename
+- Prompt for delay (used for both screenshots and recordings)
+
+Backend
+- Screenshot: grim, slurp, wayfreeze, satty, wl-copy (all screenshots should be copied to clipboard)
+- Recording: gpu-screen-recorder
+
+Power Menu
+- Logout
+- Reboot
+- Shutdown
+SSS
+Uses systemctl.
+
+User Scripts
+- Read from data/user-scripts.txt
+- Format: Label | script
+- Executes scripts from user path
+
+Theming
+- Single Catppuccin Mocha theme
+- Nerd Font icons
+- single border
+- no border radius
+- you can clone https://github.com/adi1090x/rofi and use type 1 as layout references. I also like the 

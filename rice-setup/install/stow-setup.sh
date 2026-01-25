@@ -1,16 +1,21 @@
 #!/bin/bash
 
 # This script uses stow to create symlinks for the dotfiles.
-cd "$(dirname "$0")/../stow-packages"
+cd "$(dirname "$0")/../dotfiles" || exit 1
 
 echo "Stowing dotfiles..."
 stow -t "$HOME" .
 
-# Change default shell to zsh
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "Changing default shell to zsh..."
-    chsh -s "$(which zsh)"
+# Stow GRUB theme to system directory (requires sudo)
+# We invoke stow explicitly on 'grub' to override the .stow-local-ignore in the root
+if [ -d "/usr/share/grub/themes" ]; then
+    echo "Stowing GRUB theme to /usr/share/grub/themes..."
+    sudo mkdir -p /usr/share/grub/themes
+    sudo stow -t /usr/share/grub/themes grub
+else
+    echo "Directory /usr/share/grub/themes does not exist, creating it..."
+    sudo mkdir -p /usr/share/grub/themes
+    sudo stow -t /usr/share/grub/themes grub
 fi
 
-# If plymouth is added as a system package later:
-# sudo stow -t / plymouth
+echo "Dotfiles have been stowed."
