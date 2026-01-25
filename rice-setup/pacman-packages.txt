@@ -10,7 +10,7 @@ man-db
 
 # Boot & Login
 plymouth
-ly-git
+ly
 
 # Network & Bluetooth
 inetutils
@@ -40,7 +40,7 @@ playerctl
 hyprland
 hypridle
 hyprpicker
-hyprcursor-git
+hyprcursor
 hyprpolkitagent
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
@@ -50,7 +50,7 @@ wl-clipboard
 cliphist
 
 # Theming & Wallpaper
-swww
+swww-bin
 nwg-look
 qt5ct
 qt6ct
@@ -73,7 +73,7 @@ zsh
 bash-completion
 zsh-autosuggestions
 zsh-syntax-highlighting
-starship-git
+starship
 ghostty
 xdg-terminal-exec
 

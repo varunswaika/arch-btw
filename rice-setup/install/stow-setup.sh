@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script uses stow to create symlinks for the dotfiles.
-cd "$(dirname "$0")/../dotfiles" || exit 1
+cd "$(dirname "${BASH_SOURCE[0]}")/../dotfiles" || exit 1
 
 echo "Stowing dotfiles..."
 stow -t "$HOME" .
